@@ -20,7 +20,7 @@ if (resposta === 1) {
   console.log("|    [3] Quero me tornar Full-stack     |");
   console.log("-----------------------------------------\n");
 
-  let framework = parseInt(prompt(`1> Você quer aprender Front-End, legal! ${nome}, agora você pensa aprender qual tecnologia? `));
+  let framework = parseInt(prompt(`1 > Você quer aprender Front-End, legal! ${nome}, agora você pensa aprender qual tecnologia? `));
 
 
   if (framework === 1) {
@@ -52,7 +52,7 @@ else if (resposta === 2) {
   console.log("|    [3] Quero me tornar Full-stack     |");
   console.log("-----------------------------------------\n");
 
-  let framework = parseInt(prompt(`2> Você quer aprender Back-End, legal! ${nome}, agora você pensa aprender qual tecnologia? `));
+  let framework = parseInt(prompt(`2 > Você quer aprender Back-End, legal! ${nome}, agora você pensa aprender qual tecnologia? `));
 
   if (framework === 1) {
     console.log("\n-------------------------------------------------------------");
@@ -105,13 +105,13 @@ while (continuar == true) {
 
   let continuar = prompt("Mais alguma? [S/N]: ");  
 
-  if (continuar === "N") {
+  if (continuar == "N" || continuar == "n") {
 
     // exibe o array com as tecnologias que ele inseriu
     console.log("\nInteressante! Então você quer aprender as tecnologias: ", tecnologias);
 
     // termina o loop
     continuar = false;
-    break
+    break;
   }  
 }
