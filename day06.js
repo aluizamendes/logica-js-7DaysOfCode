@@ -60,26 +60,16 @@ while (continuar == true) {
 
     let alimentoCategoria = prompt("Qual categoria se encaixa? ");
 
-    // inserir no objeto correspondente
-    if (alimentoCategoria == 1) {
-      frutas.push(alimentoAdd);
-      console.log(`\n${alimentoAdd} foi adicionado à lista de compras com sucesso!`);
+    // reatribui o número da categoria pra corresponder os índices do array
+    alimentoCategoria -= 1; 
 
-    } else if (alimentoCategoria == 2) {
-      laticinios.push(alimentoAdd);
-      console.log(`\n${alimentoAdd} foi adicionado à lista de compras com sucesso!`);
-      
-    } else if (alimentoCategoria == 3) {
-      congelados.push(alimentoAdd);
-      console.log(`\n${alimentoAdd} foi adicionado à lista de compras com sucesso!`);
+    // inserir na categoria correspondente
+    for (i = 0; i < listaCompras.length; i++) {
 
-    } else if (alimentoCategoria == 4) {
-      doces.push(alimentoAdd);
-      console.log(`\n${alimentoAdd} foi adicionado à lista de compras com sucesso!`);
-
-    } else if (alimentoCategoria == 5) {
-      temperos.push(alimentoAdd);
-      console.log(`\n${alimentoAdd} foi adicionado à lista de compras com sucesso!`);
+      if (i == parseInt(alimentoCategoria)) {        
+        listaCompras[i].push(alimentoAdd);
+        console.log(`\n${alimentoAdd} foi adicionado à lista de compras com sucesso!`);
+      }
     }
   }
   else if (opcao == 2) {
